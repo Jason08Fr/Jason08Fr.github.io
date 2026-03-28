@@ -1,20 +1,20 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
   <defs>
-    <linearGradient id="sky" x1="0" x2="0" y1="0" y2="1">
-      <stop offset="0%" stop-color="#a3d5e0"/>
-      <stop offset="100%" stop-color="#f6e6c2"/>
+    <linearGradient id="nightSky" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#0f4c75"/>
+      <stop offset="100%" stop-color="#1b6ca8"/>
     </linearGradient>
   </defs>
-  <rect width="100%" height="100%" fill="url(#sky)"/>
-  <g transform="translate(0,60)">
-    <ellipse cx="400" cy="380" rx="520" ry="200" fill="#bfe6c8"/>
-    <ellipse cx="300" cy="360" rx="420" ry="140" fill="#9fd6a7"/>
-    <ellipse cx="520" cy="340" rx="360" ry="120" fill="#8fbf8f"/>
+  <rect width="100%" height="100%" fill="url(#nightSky)"/>
+  <circle cx="620" cy="110" r="50" fill="#fff6c8" opacity="0.95"/>
+  <g fill="#ffffff" opacity="0.9">
+    <circle cx="200" cy="80" r="2.5"/>
+    <circle cx="300" cy="50" r="3"/>
+    <circle cx="450" cy="120" r="2"/>
+    <circle cx="520" cy="70" r="2.2"/>
+    <circle cx="360" cy="140" r="2"/>
   </g>
-  <g>
-    <circle cx="640" cy="110" r="40" fill="#fff2a8" opacity="0.95"/>
-    <g opacity="0.85">
-      <path d="M100 320 q40 -80 120 -80 q80 0 140 60 q60 -30 120 -30 q60 0 160 80 v80 h-540 z" fill="#7bbf7b"/>
-    </g>
+  <g transform="translate(0,200)">
+    <path d="M0 180 q200 -140 400 -60 q200 -80 400 60 v120 h-800 z" fill="#0f2f3a" opacity="0.9"/>
   </g>
 </svg>
