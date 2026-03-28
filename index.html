@@ -1,72 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ghibli-Inspired Page</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(to bottom, #AEC6CF, #F0E3E5);
-            color: #333;
-            animation: fadeIn 1s;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        #header {
-            text-align: center;
-            padding: 50px;
-            font-size: 2.5em;
-            color: #FFB6C1;
-        }
-        #clouds {
-            position: relative;
-            top: 0;
-            animation: float 5s infinite;
-        }
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-        }
-        .section {
-            padding: 40px;
-            margin: 20px;
-            border-radius: 8px;
-            background-color: rgba(255, 255, 255, 0.8);
-        }
-        #gallery {
-            display: flex;
-            justify-content: space-around;
-            font-size: 3em;
-        }
-        #contact {
-            text-align: center;
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>My Ghibli World</title>
+  <link rel="stylesheet" href="/assets/styles.css">
 </head>
 <body>
-    <div id="header">
-        <h1>🌤️ Welcome to My Ghibli-Inspired Page! 🌤️</h1>
-        <div id="clouds">☁️ ☁️ ☁️</div>
+  <nav class="site-nav">
+    <div class="logo">✨ My Ghibli World</div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero" id="home">
+    <div class="hero-inner">
+      <h1>Step into a gentle, magical world</h1>
+      <p class="lead">Original illustrations, soft colors, and subtle animations inspired by classic storybook scenes.</p>
+      <a class="btn" href="#gallery">Explore the gallery</a>
     </div>
-    <div class="section" id="welcome">
-        <h2>Welcome</h2>
-        <p>Experience the magic of Ghibli with a touch of nature and nostalgia.</p>
+    <div class="hero-illus" aria-hidden="true">
+      <img src="/images/field.svg" alt="A peaceful field illustration">
     </div>
-    <div class="section" id="gallery">
+  </header>
+
+  <main>
+    <section id="about" class="section about">
+      <div class="container">
+        <h2>About this place</h2>
+        <p>Hand-crafted, original visuals and a relaxed reading experience. The layout mirrors modern soft-theme templates: large hero, clean cards, and gentle motion.</p>
+      </div>
+    </section>
+
+    <section id="gallery" class="section gallery">
+      <div class="container">
         <h2>Gallery</h2>
-        <div>
-            <span>🌾</span>
-            <span>🏞️</span>
-            <span>🌙</span>
+        <div class="grid">
+          <article class="card">
+            <img src="/images/field.svg" alt="Peaceful fields">
+            <h3>Peaceful Fields</h3>
+            <p>Sunlit meadows and open skies.</p>
+          </article>
+          <article class="card">
+            <img src="/images/cottage.svg" alt="Cozy cottage">
+            <h3>Cozy Cottage</h3>
+            <p>A warm home nestled in the hills.</p>
+          </article>
+          <article class="card">
+            <img src="/images/night.svg" alt="Dreamy night">
+            <h3>Dreamy Night</h3>
+            <p>Quiet nights under a softened moon.</p>
+          </article>
         </div>
-    </div>
-    <div class="section" id="contact">
+      </div>
+    </section>
+
+    <section id="contact" class="section contact">
+      <div class="container">
         <h2>Contact</h2>
-        <p>Feel free to reach out!</p>
+        <p>If you'd like edits, custom images, or copy changes, tell me and I'll update everything.</p>
+        <form class="contact-form" onsubmit="return false;">
+          <input type="text" placeholder="Your name" aria-label="Your name">
+          <input type="email" placeholder="Email" aria-label="Email">
+          <textarea placeholder="Message" aria-label="Message"></textarea>
+          <button class="btn">Send</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Jason08Fr • Crafted with care</p>
     </div>
+  </footer>
+
+  <script src="/assets/main.js" defer></script>
 </body>
 </html>
