@@ -1,83 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>My Ghibli World</title>
-  <link rel="stylesheet" href="/assets/styles.css">
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>My Ghibli-Inspired Home</title>
+  <link rel="stylesheet" href="/assets/styles.css"/>
 </head>
 <body>
-  <nav class="site-nav">
-    <div class="logo">✨ My Ghibli World</div>
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#gallery">Gallery</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-
-  <header class="hero" id="home">
-    <div class="hero-inner">
-      <h1>Step into a gentle, magical world</h1>
-      <p class="lead">Original illustrations, soft colors, and subtle animations inspired by classic storybook scenes.</p>
-      <a class="btn" href="#gallery">Explore the gallery</a>
+  <nav class="nav-bar">
+    <div class="nav-container">
+      <div class="nav-logo"><span>GhibliDemo</span></div>
+      <ul class="nav-links">
+        <li><a href="#home">首页</a></li>
+        <li><a href="#about">关于</a></li>
+        <li><a href="#gallery">画廊</a></li>
+        <li><a href="#contact">联系</a></li>
+      </ul>
     </div>
-    <div class="hero-illus" aria-hidden="true">
-      <img src="/images/field.svg" alt="A peaceful field illustration">
+  </nav>
+  <header class="hero" id="home">
+    <div class="hero-bg" aria-hidden="true">
+      <img src="/images/banner.svg" alt="">
+      <div class="bubble b1"></div>
+      <div class="bubble b2"></div>
+      <div class="bubble b3"></div>
+    </div>
+    <div class="hero-content">
+      <h1>欢迎来到 Ghibli 梦想世界</h1>
+      <p>温柔配色、卡片布局、原生动画，灵感源自你喜欢的模板。</p>
+      <a class="hero-btn" href="#gallery">进入画廊</a>
     </div>
   </header>
-
   <main>
-    <section id="about" class="section about">
-      <div class="container">
-        <h2>About this place</h2>
-        <p>Hand-crafted, original visuals and a relaxed reading experience. The layout mirrors modern soft-theme templates: large hero, clean cards, and gentle motion.</p>
-      </div>
+    <section id="about" class="section wrapper">
+      <h2>关于本站</h2>
+      <p>
+        这是一个原创仿制的模板实现，采用治愈风配色，自然插画和动效，页面完全自适应。布局设计与 Mobanwang Demo 基本一致，各卡片内容可自由修改和扩充。
+      </p>
     </section>
-
-    <section id="gallery" class="section gallery">
-      <div class="container">
-        <h2>Gallery</h2>
-        <div class="grid">
-          <article class="card">
-            <img src="/images/field.svg" alt="Peaceful fields">
-            <h3>Peaceful Fields</h3>
-            <p>Sunlit meadows and open skies.</p>
-          </article>
-          <article class="card">
-            <img src="/images/cottage.svg" alt="Cozy cottage">
-            <h3>Cozy Cottage</h3>
-            <p>A warm home nestled in the hills.</p>
-          </article>
-          <article class="card">
-            <img src="/images/night.svg" alt="Dreamy night">
-            <h3>Dreamy Night</h3>
-            <p>Quiet nights under a softened moon.</p>
-          </article>
+    <section id="gallery" class="section wrapper">
+      <h2>画廊</h2>
+      <div class="card-grid">
+        <div class="card">
+          <img src="/images/field.svg" alt="田野">
+          <div class="card-title">春日田野</div>
+          <div class="card-desc">绿意盎然 阳光温柔</div>
+        </div>
+        <div class="card">
+          <img src="/images/cottage.svg" alt="小屋">
+          <div class="card-title">森林小屋</div>
+          <div class="card-desc">避世安静 温暖至极</div>
+        </div>
+        <div class="card">
+          <img src="/images/night.svg" alt="夜空">
+          <div class="card-title">静谧夜色</div>
+          <div class="card-desc">繁星与思绪共舞</div>
         </div>
       </div>
     </section>
-
-    <section id="contact" class="section contact">
-      <div class="container">
-        <h2>Contact</h2>
-        <p>If you'd like edits, custom images, or copy changes, tell me and I'll update everything.</p>
-        <form class="contact-form" onsubmit="return false;">
-          <input type="text" placeholder="Your name" aria-label="Your name">
-          <input type="email" placeholder="Email" aria-label="Email">
-          <textarea placeholder="Message" aria-label="Message"></textarea>
-          <button class="btn">Send</button>
-        </form>
-      </div>
+    <section id="contact" class="section wrapper">
+      <h2>联系</h2>
+      <form class="contact-form" onsubmit="return false;">
+        <input type="text" placeholder="您的姓名" required>
+        <input type="email" placeholder="邮箱" required>
+        <textarea placeholder="留言..." required></textarea>
+        <button type="submit">发送</button>
+      </form>
     </section>
   </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <p>&copy; 2026 Jason08Fr • Crafted with care</p>
+  <footer class="footer">
+    <div class="wrapper">
+      <p>© 2026 Jason08Fr — 由 Copilot 原创生成</p>
     </div>
   </footer>
-
-  <script src="/assets/main.js" defer></script>
+  <script src="/assets/main.js"></script>
 </body>
 </html>
