@@ -1,19 +1,15 @@
-// Lightweight interactions: smooth scroll and tiny parallax
-(function(){
-  // smooth scroll for nav links
-  document.querySelectorAll('.nav-links a').forEach(a=>{
-    a.addEventListener('click', e=>{
-      e.preventDefault();
-      const id = a.getAttribute('href');
-      const el = document.querySelector(id);
-      if(el) el.scrollIntoView({behavior:'smooth',block:'start'});
-    });
-  });
-
-  // small parallax effect on hero illustration
-  const heroIllus = document.querySelector('.hero-illus');
-  window.addEventListener('scroll', ()=>{
-    const y = window.scrollY;
-    if(heroIllus) heroIllus.style.transform = `translateY(${Math.min(y*0.08,30)}px)`;
-  });
-})();
+document.querySelectorAll(".nav-links a").forEach(a=>{
+  a.onclick = function(e){
+    e.preventDefault();
+    const id = a.getAttribute("href");
+    const el = document.querySelector(id);
+    if(el){
+      window.scrollTo({top:el.offsetTop-50, behavior:"smooth"});
+    }
+  }
+});
+// Soft input focus + card animation (optional, can be removed)
+document.querySelectorAll(".contact-form input, .contact-form textarea").forEach(x=>{
+  x.onfocus = ()=>x.style.borderColor="#62b1b1";
+  x.onblur = ()=>x.style.borderColor="#d7ebe8";
+});
