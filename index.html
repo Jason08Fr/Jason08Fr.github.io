@@ -3,18 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to My Homepage</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Enchanted Ghibli Homepage</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f4f8;
+            color: #333;
+        }
+        header {
+            background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%);
+            padding: 2rem;
+            text-align: center;
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .welcome {
+            padding: 2rem;
+            background: #e9f7ef;
+            border-radius: 8px;
+            margin: 2rem auto;
+            max-width: 800px;
+            text-align: center;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 2rem;
+        }
+        .gallery img {
+            width: 30%;
+            margin: 10px;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+        .contact {
+            padding: 2rem;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Welcome to My Homepage</h1>
+        <h1>Welcome to Our Enchanted World</h1>
+        <p>Experience the magic of Ghibli through nature and whimsy!</p>
     </header>
-    <main>
-        <p>This is a basic homepage template.</p>
-    </main>
-    <footer>
-        <p>&copy; 2026 Jason08Fr</p>
-    </footer>
+    <section class="welcome">
+        <h2>Welcome to Our Magical Site</h2>
+        <p>Explore the beauty of nature and relive the enchanting moments from our favorite films.</p>
+    </section>
+    <section class="gallery">
+        <h2>Featured Moments</h2>
+        <img src="path/to/image1.jpg" alt="Featured Moment 1">
+        <img src="path/to/image2.jpg" alt="Featured Moment 2">
+        <img src="path/to/image3.jpg" alt="Featured Moment 3">
+    </section>
+    <section class="contact">
+        <h2>Contact Us</h2>
+        <p>Feel free to reach out for any inquiries or collaborations!</p>
+    </section>
 </body>
 </html>
