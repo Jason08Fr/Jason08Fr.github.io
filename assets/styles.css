@@ -1,0 +1,50 @@
+:root{
+  --bg-1:#a3d5e0; /* sky */
+  --bg-2:#f6e6c2; /* warm */
+  --accent:#63817e; /* soft green */
+  --muted:#455a64;
+  --card:#ffffffcc;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;font-family:Georgia,serif;background:linear-gradient(180deg,var(--bg-1),var(--bg-2));color:var(--muted);-webkit-font-smoothing:antialiased}
+.container{max-width:1080px;margin:0 auto;padding:0 20px}
+.site-nav{display:flex;align-items:center;justify-content:space-between;padding:18px 20px}
+.site-nav .logo{font-weight:700;color:#fff}
+.site-nav .nav-links{list-style:none;display:flex;gap:14px;margin:0;padding:0}
+.site-nav .nav-links a{color:#fff;text-decoration:none;padding:6px 10px;border-radius:8px;transition:background .2s}
+.site-nav .nav-links a:hover{background:rgba(255,255,255,0.08)}
+
+.hero{position:relative;display:flex;align-items:center;justify-content:space-between;padding:64px 20px;min-height:56vh}
+.hero-inner{max-width:56%;color:#fff;z-index:2}
+.hero h1{font-size:clamp(1.6rem,4vw,3.2rem);margin-bottom:8px;text-shadow:2px 6px 18px rgba(0,0,0,0.18)}
+.lead{opacity:0.95;font-size:1.05rem;margin-bottom:18px}
+.btn{display:inline-block;background:#fff;color:var(--accent);padding:10px 16px;border-radius:10px;text-decoration:none;font-weight:700}
+
+.hero-illus{position:absolute;right:0;bottom:0;width:48%;max-width:560px;opacity:0.95}
+.hero-illus img{width:100%;height:auto;display:block;filter:drop-shadow(0 12px 24px rgba(0,0,0,0.12))}
+
+.section{padding:48px 0}
+.about .container{background:var(--card);border-radius:14px;padding:28px}
+
+.gallery .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px;margin-top:20px}
+.card{background:var(--card);border-radius:12px;padding:14px;box-shadow:0 10px 20px rgba(0,0,0,0.06);text-align:center}
+.card img{width:100%;height:160px;object-fit:cover;border-radius:8px}
+.card h3{margin:12px 0 6px;color:var(--accent)}
+.card p{font-size:0.95rem;color:#6b7c7a}
+
+.contact-form{display:flex;flex-direction:column;gap:10px;max-width:540px;margin-top:12px}
+.contact-form input,.contact-form textarea{padding:12px;border-radius:8px;border:1px solid rgba(0,0,0,0.06)}
+.contact-form button{align-self:flex-start}
+
+.site-footer{padding:36px 20px;text-align:center;color:#fff}
+
+/* small motion */
+@keyframes floaty{0%{transform:translateY(0)}50%{transform:translateY(-8px)}100%{transform:translateY(0)}}
+.hero-illus{animation:floaty 6s ease-in-out infinite}
+
+@media (max-width:900px){
+  .hero{flex-direction:column;padding:40px}
+  .hero-inner{max-width:100%;text-align:center}
+  .hero-illus{position:relative;width:80%;margin:24px auto 0}
+}
